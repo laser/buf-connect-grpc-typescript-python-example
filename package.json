@@ -4,9 +4,13 @@
   "description": "generate Buf Connect server and gRPC Python client with .pyi files",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf ./gen ; rm -rf ./example_python_project/chat*",
-    "gen": "buf generate proto",
-    "server": "tsx ./server.ts"
+    "build:ts": "tsc",
+    "clean:all": "rm -rf dist ; rm -rf src/gen ; rm -rf ./example_python_project/chat*",
+    "gen:all": "npm run gen:proto && npm run gen:cert",
+    "gen:cert": "mkcert localhost 127.0.0.1 ::1",
+    "gen:proto": "buf generate proto",
+    "server:js": "npm run build:ts && node ./dist/server.js",
+    "server:ts": "tsx src/server.ts"
   },
   "keywords": [],
   "author": "",

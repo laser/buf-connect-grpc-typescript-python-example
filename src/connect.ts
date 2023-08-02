@@ -1,5 +1,5 @@
 import { ConnectRouter } from "@bufbuild/connect";
-import { ChatService } from "./gen/chat_connect";
+import {ChatService} from "./gen/chat_connect";
 
 export default (router: ConnectRouter) =>
   router.service(ChatService, {
