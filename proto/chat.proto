@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package connectrpc.chat.v1;
+
+message SayRequest {
+  string sentence = 1;
+}
+
+message SayResponse {
+  string sentence = 1;
+}
+
+service ChatService {
+  rpc Say(SayRequest) returns (SayResponse) {}
+}

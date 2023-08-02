@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "bingobango"
+version = "0.1.0"
+description = ""
+authors = ["Laser <l@s3r.me>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+grpcio = "^1.56.2"
+protobuf = "^4.23.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
